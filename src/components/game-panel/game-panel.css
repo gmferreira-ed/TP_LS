@@ -1,28 +1,62 @@
-/**********************************************
-*** © Linguagens Script > DEIS > ISEC > IPC 
-*** Jogo de Memória em React
-*** Estilos para game-panel.componente.jsx 
-**********************************************/
+.game-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 115vh;
+  min-height: 60vh;
+  background: rgba(64, 68, 135, 0.2);
+  border: 1px solid #404487;
+  border-radius: 10px;
+  gap: 0;
+}
 
-#game {
-  width: 80%;
-  min-width: 200px;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  grid-template-columns: auto auto auto;
+.divisor {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(64, 68, 135, 0.6);
+  margin-bottom: 15px;
+}
+
+.game-panel-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 25px;
+}
+
+.game-panel-acoes {
+  display: flex;
+  align-items: flex-end;
   gap: 10px;
-  display: grid;
-  justify-content: center;
-  perspective: 1000px;
 }
 
-#game.avancado {
-  width: 80%;
-  grid-template-columns: auto auto auto auto auto;
+#nivel-bot {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #404487;
+  background: #1a1a2e;
+  color: #e0e0f0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
 }
 
-#game.intermedio {
-  width: 80%;
-  grid-template-columns: auto auto auto auto;
+#nivel-bot:focus {
+  border-color: #7a7fcf;
 }
+
+#btn-inicio {
+  padding: 10px 25px;
+  background: #404487;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#btn-inicio:hover { background: #5a5fa0; }
+#btn-inicio:active { transform: scale(0.97); }

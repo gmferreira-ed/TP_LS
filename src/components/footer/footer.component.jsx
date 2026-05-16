@@ -1,9 +1,10 @@
 import React from "react";
+import "./footer.css";
 
 export default function Footer() {
   return (
     <footer>
-      <p>© D E I S @ I S EC</p>
+      <p>Gabriel Ferreira, Nº  |  Tiago Condeço, Nº:2025138001  |  Afonso Tarrafa, Nº</p>
     </footer>
   );
 }

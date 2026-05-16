@@ -17,3 +17,7 @@ export const TIMEOUTGAME_INTERMEDIO = 60;
 export const TIMEOUTGAME_AVANCADO = 180;
 export const PLACEHOLDER_CARD_PATH = "/assets/images/";
 export const PLACEHOLDER_CARDBACK_PATH = `${PLACEHOLDER_CARD_PATH}ls.png`;
+
+export const COMBUSTIVEL = 100;
+export const RADAR = true;
+export const TEMPO_TURNO = 15;

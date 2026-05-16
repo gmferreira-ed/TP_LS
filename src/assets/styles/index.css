@@ -19,7 +19,6 @@
 }
 
 body {
-  background: linear-gradient(#555, rgba(0, 0, 0, 0.1)) fixed;
   font-family: Verdana, "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -31,6 +30,7 @@ button {
   border-radius: 5px;
   outline: none;
 }
+
 #message,
 footer,
 select,

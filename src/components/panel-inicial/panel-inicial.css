@@ -1,0 +1,75 @@
+/* === PANEL INICIAL === */
+#panel-inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+#setup {
+  background: rgba(64, 68, 135, 0.2);
+  border: 1px solid #404487;
+  border-radius: 10px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#setup label {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+#setup input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid #404487;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 1rem;
+  width: 250px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#setup input:focus {
+  border-color: #7a7fcf;
+}
+
+#setup input::placeholder {
+  color: #888;
+}
+
+#setup button {
+  margin-top: 5px;
+  padding: 10px 40px;
+  background: #404487;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#setup button:hover {
+  background: #5a5fa0;
+}
+
+#setup button:active {
+  transform: scale(0.97);
+}
+
+#erro-nome {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: -5px;
+}
