@@ -1,0 +1,24 @@
+.painel-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titulo-grupo {
+  font-size: 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.linha-info {
+  display: flex;
+  gap: 20px;
+}
+
+.info-bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}

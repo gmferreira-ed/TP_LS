@@ -3,7 +3,6 @@ import { useState } from "react";
 import {
   Header,
   Footer,
-  ControlPanel,
   GamePanel,
   PanelInicial,
 } from "./components/";
@@ -19,16 +18,17 @@ function App() {
     <div id="container">
       <Header />
       <main>
-        { jogador === null ? 
+        {/* { jogador === null ? 
         //se ainda n tiver nome
         (<PanelInicial onStart={handleStart} />) : 
 
         //quando tiver nome
         (<div>
           <GamePanel jogador={jogador}/>  
-         </div>)}
+         </div>)
+        } */}
 
-        {/* <GamePanel jogador={"jogador"}/>  */}
+        <GamePanel jogador={"jogador"}/> 
 
       </main>
       <Footer />

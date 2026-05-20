@@ -1,10 +1,25 @@
 #panel-control {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
-  flex-wrap: wrap;
-  max-width: 900px;
+}
+
+.painel-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titulo-grupo {
+  font-size: 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.linha-info {
+  display: flex;
+  gap: 20px;
 }
 
 .info-bloco {
@@ -43,6 +58,8 @@
   padding: 4px 12px;
   border-radius: 20px;
   letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
 }
 
 .radar-badge.disponivel {
