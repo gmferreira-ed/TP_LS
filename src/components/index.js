@@ -6,3 +6,4 @@ export { default as TabuleiroJogo } from "./tabuleiro-jogo/tabuleiro-jogo.compon
 export { default as Footer } from "./footer/footer.component";
 export { default as Header } from "./header/header.component";
 export { default as Timer } from "./timer/timer.component";
+export { default as ModalOver } from "./modal-game-over/modal-game-over.component";

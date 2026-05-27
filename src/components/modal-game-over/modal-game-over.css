@@ -1,0 +1,73 @@
+/* GameOverModal.css */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-box {
+  background: #1a1a2e;
+  border: 2px solid #e94560;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  min-width: 280px;
+  box-shadow: 0 0 40px rgba(233, 69, 96, 0.3);
+  animation: slideUp 0.25s ease;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #e94560;
+  margin: 0 0 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.modal-score {
+  font-size: 1.1rem;
+  color: #a0a0b0;
+  margin: 0 0 2rem;
+}
+
+.modal-score strong {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.modal-btn-menu {
+  background: transparent;
+  border: 2px solid #e94560;
+  color: #e94560;
+  padding: 0.65rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modal-btn-menu:hover {
+  background: #e94560;
+  color: #fff;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}

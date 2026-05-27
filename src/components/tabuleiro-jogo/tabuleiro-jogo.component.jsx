@@ -1,7 +1,18 @@
+import { useState } from "react";
 
 function TabuleiroJogo() {
+    
+    const [checked, setChecked] = useState(false);
+
     return(
-        <p>Tabuleiro De jogo</p>
+        <div>
+            <p>Tabuleiro De jogo</p>
+            <input
+                type="checkbox"
+                checked={checked}
+                onChange={(e) => setChecked(e.target.checked)}
+            />
+        </div>
     );
 }
 

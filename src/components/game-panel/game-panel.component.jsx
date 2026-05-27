@@ -1,31 +1,43 @@
 import "./game-panel.css";
 import { useState } from "react";
 
-import { InfoPanel, Timer, TabuleiroInicial, TabuleiroJogo } from "../../components/";
+import { InfoPanel, Timer, TabuleiroInicial, TabuleiroJogo , ModalOver} from "../../components/";
 
 function GamePanel({ jogador }) {
 
+  //Variavel para o Game start ou não
   const [start, setStart] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
+
   const [tabuleiroValido, setTabuleiroValido] = useState(false);
   const [erro, setErro] = useState(false);
 
   //true  -> jogador  |  false -> máquina
   const [turnoJogador, setTurnoJogador] = useState(true);
 
+  const [score, setScore] = useState(0);
+
+
+  //================= FUNÇÕES =================
+
   const mudaStart = () =>{
     if(start){
       setStart(false)
       setTabuleiroValido(false);
+      setGameOver(true);
     }
     else{
       if (tabuleiroValido === true) {
         setStart(true);
         setErro(false);
+        setGameOver(false);
       }
       else
         setErro(true);
     }
   }
+
+  //=============================================
 
   return (
     <section className="game-panel">
@@ -66,13 +78,19 @@ function GamePanel({ jogador }) {
 
         { start === false ? 
           (<TabuleiroInicial 
-            setTabuleiroValido={setTabuleiroValido} 
+            setTabuleiroValido={setTabuleiroValido} jogoIniciou={start}
           />) 
           : 
-          (<TabuleiroJogo />  )
+          (<TabuleiroJogo jogoIniciou={start}/>  )
         }
 
       </div>
+
+      <ModalOver
+        show={gameOver}
+        setGameOver = {setGameOver}
+        score={score}
+      />
 
     </section>
   );
