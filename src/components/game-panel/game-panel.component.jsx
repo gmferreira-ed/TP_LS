@@ -27,7 +27,7 @@ function GamePanel({ jogador }) {
       setGameOver(true);
     }
     else{
-      if (tabuleiroValido === true) {
+      if (tabuleiroValido) {
         setStart(true);
         setErro(false);
         setGameOver(false);
@@ -59,7 +59,6 @@ function GamePanel({ jogador }) {
           <div className="acoes">
             <select id="nivel-bot" disabled={start}>
               <option value="basico">Básico</option>
-              <option value="intermedio">Intermédio</option>
               <option value="avancado">Avançado</option>
             </select>
             <button id="btn-inicio" onClick={mudaStart}>
