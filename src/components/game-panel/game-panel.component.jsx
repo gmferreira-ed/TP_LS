@@ -65,15 +65,14 @@ function GamePanel({ jogador }) {
               {start ? "Para jogo" : "Inicar Jogo"}
             </button>
           </div>
-          {erro && <p id="erro-nome">Introduz os teus barcos primeiro</p>}
+          {erro && <p id="erro-nome">Valida o tabuleiro o teu tabuleiro de jogo primeiro</p>}
         </div>
       </div>
 
       <hr className="divisor" />
 
       <div id="game" className="game">
-        <p>- Primeiro Tabuleiro de Posições</p><br></br>
-        <p>- Segundo TabuleirOS de JOGO</p><br /><br />
+        <p>- Primeiro Tabuleiro de Posições - Segundo TabuleirOS de JOGO</p><br></br>
 
         { start === false ? 
           (<TabuleiroInicial 

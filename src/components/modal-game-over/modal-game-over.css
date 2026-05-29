@@ -61,6 +61,11 @@
   color: #fff;
 }
 
+.modal-btn-menu:hover:not(:disabled) {
+    background: #ff607b;
+    transform: scale(1.03);
+}
+
 /* Animações */
 @keyframes fadeIn {
   from { opacity: 0; }

@@ -7,3 +7,5 @@ export { default as Footer } from "./footer/footer.component";
 export { default as Header } from "./header/header.component";
 export { default as Timer } from "./timer/timer.component";
 export { default as ModalOver } from "./modal-game-over/modal-game-over.component";
+export { default as Tabuleiro } from "./tabuleiro/tabuleiro.component";
+export { default as Celula } from "./celula/celula.component";

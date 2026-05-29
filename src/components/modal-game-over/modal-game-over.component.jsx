@@ -13,10 +13,13 @@ function ModalOver({show , score, setGameOver}) {
       <div className="modal-box">
         <h1 className="modal-title">Game Over</h1>
         <p className="modal-score">
+          Vencedor: <strong>{score}</strong>
+        </p>
+        <p className="modal-score">
           Pontuação: <strong>{score}</strong>
         </p>
         <button className="modal-btn-menu" onClick={closeModal}>
-          Fechar
+          Jogar de Novo
         </button>
       </div>
     </div>
