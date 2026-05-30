@@ -1,6 +1,7 @@
 #panel-control {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -12,34 +13,34 @@
 
 .titulo-grupo {
   font-size: 0.9rem;
-  color: #fff;
+  color: #333333;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .linha-info {
   display: flex;
-  gap: 20px;
+  gap: 45px;
 }
 
 .info-bloco {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .info-label {
   font-size: 0.7rem;
-  color: #aaa;
+  color: #666666;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .info-valor {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #e0e0f0;
+  color: #333333;
 }
 
 .info-valor.alerta {
@@ -47,9 +48,25 @@
   animation: piscar 0.5s infinite;
 }
 
+.info-valor.combustivel-critico {
+  color: #e74c3c;
+  animation: piscar 0.5s infinite;
+}
+
+.info-valor.combustivel-baixo {
+  color: #f39c12;
+}
+
 @keyframes piscar {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
 }
 
 .radar-badge {
@@ -63,13 +80,21 @@
 }
 
 .radar-badge.disponivel {
-  background: rgba(39, 174, 96, 0.2);
-  color: #2ecc71;
-  border: 1px solid #2ecc71;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
 }
 
 .radar-badge.indisponivel {
-  background: rgba(231, 76, 60, 0.2);
-  color: #e74c3c;
-  border: 1px solid #e74c3c;
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+  cursor: default;
+}
+
+.radar-badge.ativo {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 2px solid #1565c0;
+  animation: piscar 0.8s infinite;
 }

@@ -1,0 +1,14 @@
+.ti-grelha {
+    display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+    gap: 2px;
+    background-color: #333333;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.ti-grelha.bloqueada {
+    pointer-events: none;
+    opacity: 0.8;
+}

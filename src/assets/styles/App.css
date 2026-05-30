@@ -8,11 +8,10 @@
 
 /* === BODY === */
 body {
-  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  background-attachment: fixed;
+  background: #f4f4f9;
   min-height: 100vh;
-  font-family: Verdana, "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  color: #e0e0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
 }
 
 /* === CONTAINER PRINCIPAL === */

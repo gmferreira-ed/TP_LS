@@ -8,7 +8,7 @@ import {
 } from "./components/";
 
 function App() {
-  const [jogador, setJogador] = useState(null); // null = ainda no setup
+  const [jogador, setJogador] = useState(null);
 
   const handleStart = (nome) => {
     setJogador(nome);
@@ -18,17 +18,11 @@ function App() {
     <div id="container">
       <Header />
       <main>
-        {/* { jogador === null ? 
-        //se ainda n tiver nome
-        (<PanelInicial onStart={handleStart} />) : 
-
-        //quando tiver nome
-        (<div>
-          <GamePanel jogador={jogador}/>  
-         </div>)
-        } */}
-
-        <GamePanel jogador={"jogador"}/> 
+        {jogador === null ? (
+          <PanelInicial onStart={handleStart} />
+        ) : (
+          <GamePanel jogador={jogador} />
+        )}
 
       </main>
       <Footer />

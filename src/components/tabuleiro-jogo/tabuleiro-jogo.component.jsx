@@ -1,17 +1,28 @@
-import { useState } from "react";
+import "./tabuleiro-jogo.css";
+import { Tabuleiro } from "../../components/";
 
-function TabuleiroJogo() {
-    
-    const [checked, setChecked] = useState(false);
-
+function TabuleiroJogo({ grelhaJogador, grelhaPC, ataqueJogador, turnoJogador, debugMode }) {
     return(
-        <div>
-            <p>Tabuleiro De jogo</p>
-            <input
-                type="checkbox"
-                checked={checked}
-                onChange={(e) => setChecked(e.target.checked)}
-            />
+        <div className="tj-container">
+            <div className="tj-painel">
+                <p>O Teu Tabuleiro</p>
+                <Tabuleiro 
+                    grelha={grelhaJogador} 
+                    handleClique={() => {}}
+                    isPC={false}
+                />
+            </div>
+
+            <div className="tj-painel">
+                <p>Tabuleiro do Computador</p>
+                <Tabuleiro 
+                    grelha={grelhaPC} 
+                    handleClique={ataqueJogador}
+                    isPC={true}
+                    debugMode={debugMode}
+                    turnoJogador={turnoJogador}
+                />
+            </div>
         </div>
     );
 }

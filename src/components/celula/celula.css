@@ -1,0 +1,52 @@
+.ti-celula {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.ti-celula:hover {
+    background-color: #b2ebf2;
+}
+
+.ti-grelha.bloqueada .ti-celula {
+    cursor: not-allowed;
+}
+
+/* Estados */
+.ti-celula.agua {
+    background-color: #e0f7fa;
+}
+
+.ti-celula.barco {
+    background-color: #607d8b; /* Cinza azulado para barcos */
+}
+
+.ti-celula.falha {
+    background-color: #90caf9;
+}
+
+.ti-celula.acerto {
+    background-color: #ef5350;
+}
+
+.ti-celula.destruido {
+    background-color: #b71c1c;
+}
+
+.ti-celula.radar {
+    background-color: #fff59d;
+    border: 2px solid #fbc02d;
+}
+
+/* Marcas Emoji */
+.marca-falha {
+    color: #1565c0;
+    font-weight: bold;
+}

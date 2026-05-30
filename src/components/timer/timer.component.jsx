@@ -1,54 +1,51 @@
 import { useState, useEffect } from "react";
 import "./timer.css";
 
-function Timer({ setTurnoJogador, turnoJogador, jogoAtivo }) {
+function Timer({ setTurnoJogador, turnoJogador, jogoAtivo, onTimeout }) {
 
   const [tempo, setTempo] = useState(15);
   
-  //esxecuta oq está dentro dele sempre que cada uma das variaveis mudar 
   useEffect(() => {
-    setTempo(15); // reseta sempre que jogoAtivo muda
+    if (tempo === 0 && jogoAtivo) {
+      if (turnoJogador === true) {
+        if (onTimeout) onTimeout();
+      } else {
+        setTurnoJogador(true);
+      }
+    }
+  }, [tempo, jogoAtivo, turnoJogador, onTimeout, setTurnoJogador]);
 
-    if (!jogoAtivo) return; // se for false ent n começa/cria o timer
+  useEffect(() => {
+    setTempo(15);
 
-    //cria um loop a cada 1 segundo
+    if (!jogoAtivo) return;
+
     const interval = setInterval(() => {
-      
-      //valor anterior do tempo atual
       setTempo((prev) => {
-
-        if (prev <= 1) {
-
-          // quando chegar a 0 muda de jogador para a máquina ouseja de true para false
-          if (turnoJogador === true)
-            setTurnoJogador(false);
-          else
-            setTurnoJogador(true);
-          
-          //reseta o tempo
-          return 15;
-        }
-
-        //se não decrementa 1
+        if (prev <= 0) return 0;
         return prev - 1;
       });
+    }, 1000);
 
-    }, 1000); //1000 é 1 segundo
-
-
-    //Impede múltiplos timers ao mesmo tempo
-    // Sem isto, criavam-se vários intervals, o tempo acelerava sozinho
     return () => clearInterval(interval);
-
-  }, [turnoJogador, setTurnoJogador, jogoAtivo]);
+  }, [turnoJogador, jogoAtivo]);
 
   return (
     <div className="painel-grupo">
 
+      <div className="turno-indicador">
+        <span className={`turno-label ${turnoJogador ? "turno-ativo" : ""}`}>
+          Jogador
+        </span>
+        <span className={`turno-label ${!turnoJogador ? "turno-ativo" : ""}`}>
+          Máquina
+        </span>
+      </div>
+
       <div className="linha-info">
 
         <div className="info-bloco">
-          <span className="info-label">Jogador</span>
+          <span className="info-label">Tempo Jogador</span>
 
           <span className={`info-valor ${turnoJogador === true && tempo <= 5 ? "alerta" : ""}`} >
             {turnoJogador ? `${tempo}s` : "--"}
@@ -56,7 +53,7 @@ function Timer({ setTurnoJogador, turnoJogador, jogoAtivo }) {
         </div>
 
         <div className="info-bloco">
-          <span className="info-label">Máquina</span>
+          <span className="info-label">Tempo Máquina</span>
 
           <span className={`info-valor ${turnoJogador === false && tempo <= 5 ? "alerta" : ""}`} >
             {turnoJogador === false ? `${tempo}s` : "--"}

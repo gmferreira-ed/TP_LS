@@ -3,8 +3,6 @@ import { useState } from "react";
 
 function PanelInicial({ onStart }) {
 
-  //variavel de estado nome
-  //precisa ser assim pq se n a caixa de texto no browser n mudava nada
   const [nome, setNome] = useState("");
 
   const [erro, setErro] = useState(false);
